@@ -1,17 +1,14 @@
 {
-    "name": "Fiscal Accounting (Rep. Dominicana)",
+    "name": "Fiscal Accounting",
     "summary": """
         Este módulo implementa la administración y gestión de los números de
          comprobantes fiscales para el cumplimento de la norma 06-18 de la
          Dirección de Impuestos Internos en la República Dominicana.""",
-    "author": "iterativo LLC, " "Indexa",
+    "author": "Adel Networks S,R,L",
     "category": "Localization",
     "license": "LGPL-3",
-    "website": "https://github.com/odoo-dominicana",
-    "version": "14.0.1.7.8",
-    # any module necessary for this one to work correctly
+    "version": "14.0.1.7.6",
     "depends": ["l10n_latam_invoice_document", "l10n_do"],
-    # always loaded
     "data": [
         "security/ir.model.access.csv",
         "security/res_groups.xml",
@@ -30,7 +27,6 @@
         "views/report_templates.xml",
         "views/report_invoice.xml",
     ],
-    # only loaded in demonstration mode
     "demo": [
         "demo/res_partner_demo.xml",
     ],

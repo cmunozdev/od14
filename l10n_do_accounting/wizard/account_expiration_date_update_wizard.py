@@ -18,11 +18,11 @@ class ExpirationDateUpdateWizard(models.TransientModel):
 
     def update_expiration_date(self):
         self.ensure_one()
-        if (
-            self.l10n_do_ncf_expiration_date
-            < self.document_type_id.l10n_do_ncf_expiration_date
-        ):
-            raise UserError(_("You must set a date later than the current one"))
+        # if (
+        #     self.l10n_do_ncf_expiration_date
+        #     < self.document_type_id.l10n_do_ncf_expiration_date
+        # ):
+        #     raise UserError(_("You must set a date later than the current one"))
 
         self.document_type_id.sudo().write(
             {"l10n_do_ncf_expiration_date": self.l10n_do_ncf_expiration_date}
